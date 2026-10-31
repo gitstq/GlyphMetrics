@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "glyphmetrics"
+version = "1.0.0"
+description = "Cluster-aware, ANSI-aware terminal text measurement for Python - zero dependencies"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "gitstq" }]
+keywords = [
+    "terminal", "unicode", "wcwidth", "grapheme", "width", "ansi",
+    "east-asian-width", "emoji", "textwrap", "cli", "tui",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Internationalization",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Terminals",
+    "Typing :: Typed",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+glyphmetrics = "glyphmetrics.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/gitstq/GlyphMetrics"
+Repository = "https://github.com/gitstq/GlyphMetrics"
+Issues = "https://github.com/gitstq/GlyphMetrics/issues"
+
+[tool.setuptools]
+packages = ["glyphmetrics"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
